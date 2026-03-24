@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text overflow-hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom scrollbar if needed, or simply hide it for full 3D feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded;
+}

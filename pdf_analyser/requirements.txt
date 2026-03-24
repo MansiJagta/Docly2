@@ -1,0 +1,90 @@
+# # # Web Framework
+# # fastapi
+# # uvicorn
+# # python-multipart
+
+# # # PDF Processing & OCR
+# # pymupdf
+# # paddleocr
+# # paddlepaddle  # Note: Required for paddleocr to run
+
+# # # AI & Machine Learning
+# # llama-cpp-python
+# # sentence-transformers
+# # torch
+# # ultralytics
+
+
+
+
+
+
+
+
+
+# # Web Framework & API
+# fastapi
+# uvicorn
+# python-multipart
+
+# # PDF Processing & OCR
+# pymupdf
+# paddleocr
+# paddlepaddle
+
+# # Vector Database & Embeddings (For "Contextual" Search)
+# chromadb
+# sentence-transformers
+
+# # AI Models & LLM Inference (GGUF Support)
+# llama-cpp-python
+# torch
+
+# # Image/Vision Processing
+# ultralytics
+# opencv-python
+# pillow
+
+# # Environment & Utilities
+# python-dotenv
+
+
+
+
+
+
+
+
+
+# --- Web Framework & API ---
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+
+# --- LangGraph & Orchestration ---
+langgraph
+langchain
+langchain-community
+# Specifically for saving AI state to a local file
+langgraph-checkpoint-sqlite
+
+# --- PDF Processing & OCR ---
+pymupdf
+paddleocr
+paddlepaddle
+opencv-python
+pillow
+
+# --- Vector Database & Embeddings ---
+# Successor to sqlite-vss, perfect for local-only apps
+sqlite-vec
+sentence-transformers
+
+# --- AI Models & LLM Inference ---
+# Ensure you have build tools installed for this (CMake)
+llama-cpp-python
+torch
+
+# --- Image/Vision Processing (Layout Detection) ---
+ultralytics

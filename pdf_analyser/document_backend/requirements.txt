@@ -1,0 +1,23 @@
+# Backend API
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Config and DB
+python-dotenv
+sqlalchemy
+pydantic
+
+# LangGraph + LLM stack
+langgraph
+langgraph-checkpoint-sqlite
+langchain
+langchain-community
+langchain-ollama
+langchain-text-splitters
+
+# PDF + vector/embedding pipeline
+pymupdf
+sqlite-vec
+sentence-transformers
+numpy

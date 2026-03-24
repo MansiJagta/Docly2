@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+
+  /* --- CYBER-VAULT PALETTE (STRICT) --- */
+  /* Backgrounds */
+  --color-bg-obsidian: #000000;
+  /* Pure Obsidian Black */
+  --color-bg-navy: #0F172A;
+  /* Midnight Navy */
+  --color-bg-navy-glass: rgba(15, 23, 42, 0.6);
+
+  /* Accents */
+  --color-cobalt: #3B82F6;
+  /* Electric Cobalt Blue (Primary) */
+  --color-cobalt-light: #60A5FA;
+  /* Light Cobalt (Hover) */
+  --color-glow: #1E3A8A;
+  /* Deep Cobalt (Atmosphere) */
+  --color-cyan: #2DD4BF;
+  /* Cyan-Teal (Gradient Start) */
+
+  /* Borders & Surface */
+  --color-border: #1E293B;
+  /* Slate Border */
+  --color-border-glow: rgba(59, 130, 246, 0.5);
+
+  /* Typography */
+  --color-text-primary: #FFFFFF;
+  /* Pure White */
+  --color-text-secondary: #94A3B8;
+  /* Cool Muted Grey */
+}
+
+body {
+  @apply font-sans antialiased;
+  background-color: var(--color-bg-obsidian);
+  color: var(--color-text-primary);
+  /* Atmospheric Radial Bloom */
+  background-image:
+    radial-gradient(circle at 50% -20%, var(--color-glow), transparent 60%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* --- UTILITIES --- */
+
+/* Cyber Glass Panel */
+.glass-panel {
+  background: var(--color-bg-navy-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--color-border);
+}
+
+/* Cyber Card */
+.cyber-card {
+  background: rgba(15, 23, 42, 0.6);
+  /* Navy with opacity */
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  border-color: var(--color-cobalt);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+}
+
+/* Neon Glow Button Utility */
+.btn-neon {
+  background-color: var(--color-cobalt);
+  color: white;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+  background-color: var(--color-cobalt-light);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(30, 41, 59, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.5) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  /* Silver */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

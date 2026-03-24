@@ -1,0 +1,37 @@
+# --- Python Environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python Cache / Test Artifacts ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- Local Config / Secrets ---
+.env
+
+# --- Local Databases ---
+*.db
+*.sqlite
+*.sqlite-journal
+qa_checkpoints.db
+app.db
+sql_app.db
+
+# --- Uploaded/Generated Documents ---
+storage/
+app/storage/
+app/storage/documents/
+
+# --- Local AI Runtime / Model Artifacts ---
+engine/
+models/
+*.gguf
+
+# --- Logs / Debug Outputs ---
+*.log
+graph_structure.png
